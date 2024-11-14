@@ -33,6 +33,9 @@ app.use(
 app.use("/api/users", userRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/checklists", checklistRoutes);
+app.get('/test', (req, res) => {
+    res.send('Test route is working!');
+});
 
 app.use(notFound);
 app.use(errorHandler);
